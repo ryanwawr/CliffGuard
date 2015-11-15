@@ -70,15 +70,7 @@ public class PostgresDatabaseLoginConfiguration extends
 		try {
 			Class.forName("org.postgresql.Driver");
 
-			//System.out.print(getDBhost() + "\n");
-			//System.out.print(getDBport() + "\n");
-			//System.out.print(getDBname() + "\n");
-			//System.out.print(getDBuser() + "\n");
-			//System.out.print(getDBpasswd() + "\n");
-			
-			conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "password");
-					//String.format("jdbc:postgresql://%s:%s/%s", 
-						//	getDBhost(), getDBport(), getDBname()), getDBuser(), getDBpasswd());
+			conn = DriverManager.getConnection(String.format("jdbc:postgresql://%s:%s/%s",	getDBhost(), getDBport(), getDBname()), getDBuser(), getDBpasswd());
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
@@ -87,7 +79,6 @@ public class PostgresDatabaseLoginConfiguration extends
 	}
 
 	@Override
-	//TODO: Probably rewrite this
 	public Map<String, Schema> getSchemaMap() throws SQLException {
 		
 		Connection conn = createConnection();
@@ -110,8 +101,6 @@ public class PostgresDatabaseLoginConfiguration extends
 			Schema sch = loadSchemaFromDB(conn, s);
 			schemaMap.put(s, sch);
 		}
-		
-		System.out.print("Get map 4\n");
 		
 		return schemaMap;
 	}

@@ -1,8 +1,3 @@
-Command to run:
-java -cp build/CliffGuard.jar edu.umich.robustopt.experiments.CliffGuard postgres data/databases.conf postgres_design postgres_design data/cliffguard.conf postgres1 ../../data-clif/queries.csv ../../data-clif/cliffguard_cache/ ../../data-clif/stats.txt 0.01 ../../data-clif/design_output.txt f ../../data-clif/deployment_script.txt
-
-
-
 Author: Barzan Mozafari (mozafari AT umich.edu)
 http://cliffguard.org
 

@@ -57,13 +57,13 @@
     <bean id="postgres1" class="edu.umich.robustopt.postgres.PostgresDatabaseLoginConfiguration">
         <property name="empty" value="false"/>
         <property name="DBalias" value="postgres_design"/>
-        <property name="DBhost" value="68.56.142.194"/>
+        <property name="DBhost" value="35.2.149.208"/>
         <property name="DBport" value="5432"/>
-        <property name="DBname" value="PostgresDB"/>
-        <property name="DBuser" value="PostgresServerUsername"/>
-        <property name="DBpasswd" value="PostgresServerPassword"/>
-        <property name="PostgresUsername" value="postgresdb"/>
-        <property name="PostgresPassword" value="postgrespw"/>	
+        <property name="DBname" value="postgres"/>
+        <property name="DBuser" value="postgres"/>
+        <property name="DBpasswd" value="password"/>
+        <property name="PostgresUsername" value="postgres"/>
+        <property name="PostgresPassword" value="password"/>	
     </bean>
 
     <bean id="all-servers" class="java.util.ArrayList">
